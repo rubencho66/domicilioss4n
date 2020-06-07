@@ -1,6 +1,6 @@
 package co.com.domilicilios.facade.imp;
 
-import co.com.domilicilios.builder.FileInstruction;
+import co.com.domilicilios.builder.impl.FileInstructionImpl;
 import co.com.domilicilios.builder.InstructionBuilder;
 import co.com.domilicilios.facade.ManageRestaurantFacade;
 import co.com.domilicilios.service.DeliverOrderService;
@@ -13,7 +13,7 @@ public class ManageRestaurantFacadeImpl implements ManageRestaurantFacade {
 
     public ManageRestaurantFacadeImpl() {
         this.service = new DeliverOrderServiceImpl();
-        this.builder = new FileInstruction();
+        this.builder = new FileInstructionImpl();
     }
 
     @Override

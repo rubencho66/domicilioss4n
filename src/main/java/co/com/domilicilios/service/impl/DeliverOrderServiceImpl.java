@@ -1,6 +1,6 @@
 package co.com.domilicilios.service.impl;
 
-import co.com.domilicilios.builder.FileInstruction;
+import co.com.domilicilios.builder.impl.FileInstructionImpl;
 import co.com.domilicilios.builder.InstructionBuilder;
 import co.com.domilicilios.dao.DroneDao;
 import co.com.domilicilios.dao.PositionDao;
@@ -28,7 +28,7 @@ public class DeliverOrderServiceImpl implements DeliverOrderService {
         this.propertiesDao = new PropertiesDaoImpl();
         this.droneDao = new DroneDaoImpl(this.propertiesDao);
         this.positionDao = new PositionDaoImpl();
-        this.builder = new FileInstruction();
+        this.builder = new FileInstructionImpl();
     }
 
     @Override

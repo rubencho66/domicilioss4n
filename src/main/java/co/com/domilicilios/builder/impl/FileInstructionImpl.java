@@ -1,5 +1,6 @@
-package co.com.domilicilios.builder;
+package co.com.domilicilios.builder.impl;
 
+import co.com.domilicilios.builder.InstructionBuilder;
 import co.com.domilicilios.dao.PropertiesDao;
 import co.com.domilicilios.dao.impl.PropertiesDaoImpl;
 import org.slf4j.Logger;
@@ -11,9 +12,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class FileInstruction implements InstructionBuilder {
+public class FileInstructionImpl implements InstructionBuilder {
 
-    final static Logger LOGGER = LoggerFactory.getLogger(FileInstruction.class);
+    final static Logger LOGGER = LoggerFactory.getLogger(FileInstructionImpl.class);
 
     private static final String PATH_INITIAL = "FilesInput/input";
     private static final String PATH_OUTPUT = "FilesOutput/output";
@@ -21,7 +22,7 @@ public class FileInstruction implements InstructionBuilder {
 
     private PropertiesDao dao;
 
-    public FileInstruction() {
+    public FileInstructionImpl() {
         this.dao = new PropertiesDaoImpl();
     }
 
